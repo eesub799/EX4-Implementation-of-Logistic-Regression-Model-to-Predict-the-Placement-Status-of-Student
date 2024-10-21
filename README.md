@@ -1,6 +1,5 @@
 # EX 4 Implementation of Logistic Regression Model to Predict the Placement Status of Student
 ## DATE:
-
 ## AIM:
 To write a program to implement the the Logistic Regression Model to Predict the Placement Status of Student.
 
@@ -9,19 +8,20 @@ To write a program to implement the the Logistic Regression Model to Predict the
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-1.You are given 4 input data points with 3 features each and a target value (y) for each point.
-2.Set theta = [0, 0, 0, 0] (4 coefficients for 3 features + intercept).
-3.Calculate predictions, compute errors, and update theta iteratively.
-4.After finding optimal theta, predict the value for any new data point.
+1.x is the feature matrix, and y is the target variable
 
+2.train_test_split splits the data.
+
+3.LogisticRegression builds the model.
+
+4.accuracy_score evaluates performance.
 ## Program:
 ```
-/*
 Program to implement the the Logistic Regression Model to Predict the Placement Status of Student.
 Developed by: SHAIK EESUB
 RegisterNumber: 2305002021
-*/
-```import pandas as pd
+
+import pandas as pd
 data=pd.read_csv("/content/ex45Placement_Data.csv")
 data.head()
 data1=data.copy()
@@ -60,9 +60,10 @@ print("\nClassification Report:\n",cr)
 from sklearn import metrics
 cm_display=metrics.ConfusionMatrixDisplay(confusion_matrix=confusion,display_labels=[True,False])
 cm_display.plot()
+```
 
 ## Output:
-[Uploading E4.jpg…]()
+![image](https://github.com/user-attachments/assets/8319fcaa-cc6c-4095-8bf4-efb52e6620b8)
 
 
 
